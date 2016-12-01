@@ -1,0 +1,6 @@
+<div class="roll-button">
+    <button class="btn btn-primary btn-lg" ng-click="doRoll()">{{result}}</button>
+</div>
+<div class = "dice-buttons">
+    <button ng-click="doMult()" class="btn btn-default">{{dice.multiplier}}</button><span>d</span><button ng-click="doType()" class="btn btn-default">{{dice.die}}</button><button ng-click="doMod()" class="btn btn-default">{{dice.modifierStr()}}</button>
+</div>

@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+$button-color: #5bc0de;
+$button-hover-color: #31b0d5;
+$button-text-color: #fff;
+
+$primary-background-color: #fff;
+$secondary-background-color: #f8f8f8;
+$border-color: #e7e7e7;
+
+$primary-text-color: #333;
+$secondary-text-color: #2969a6;
+
+$icon-color: #789ba9;
+
+
+body {
+    font-family: 'Raleway', Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 50px;
+}
+
+footer {
+    padding-top: 16px;
+    background-color: $secondary-background-color;
+}
+
+.nav i.glyphicon {
+    margin-right: 0.5em;
+}
+
+.mainbox {
+    margin-top: 50px;
+}
+
+.die-panel {
+    text-align:center;
+
+    div {
+        margin:3px;
+    }
+
+    .roll-button {
+        margin-bottom: 12px;
+
+        button {
+            min-width: 120px;
+            font-size: 1.6em;
+        }
+    }
+
+    .dice-buttons {
+        button {
+            min-width: 60px;
+            margin: 0 6px;
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    }
+
+}
+
+.btn-num {
+    margin: 3px;
+    width: 3.5em;
+}
+
+.button-panel {
+    text-align: center;
+}

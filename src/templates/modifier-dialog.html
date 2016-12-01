@@ -1,0 +1,26 @@
+<!-- MODAL MULTIPLIER DIALIG
+================================================== -->
+<div id="modModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modify roll by:</h4>
+            </div>
+            <div class="modal-body">
+                <div class="button-panel">
+                    <button ng-repeat="mod in dice.mod" ng-click="doChangeMod(mod)" class="btn-num btn btn-default">{{mod}}</button>
+
+                    <div class="btn-group" data-toggle="buttons">
+                        <label id="optionPos" class="btn btn-default active">
+                            <input type="radio" autocomplete="off">+
+                        </label>
+                        <label id="optionNeg" class="btn btn-default">
+                            <input type="radio" autocomplete="off">-
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
