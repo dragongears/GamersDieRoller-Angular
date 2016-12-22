@@ -1,2 +1,2 @@
 // Define module
-angular.module('panel', []);
+angular.module('die-panel', []);
