@@ -1,8 +1,42 @@
-(function () {
+'use strict';
 
-    'use strict';
+angular
+    .module('dice')
+    .service('DiceService', function() {
+        // var die = function() {
+        //     this.die = 6;
+        //     this.multiplier = 1;
+        //     this.modifier = 0;
+        //     this.result = 1;
+        //     this.name = "";
+        //
+        //     this.type = [2, 3, 4, 6, 8, 10, 12, 16, 20, 30, 100];
+        //
+        //     this.roll = function() {
+        //         this.result = 0;
+        //         for (var x=0; x<this.multiplier; x++) {
+        //             this.result += Math.floor(Math.random()*this.die)+1;
+        //         }
+        //         this.result += this.modifier;
+        //         return this.result;
+        //     };
+        //
+        //     this.modifierStr = function() {
+        //         if (this.modifier < 0) {
+        //             return this.modifier;
+        //         } else {
+        //             return '+' + this.modifier;
+        //         }
+        //     };
+        //
+        //     this.toString = function() {
+        //         return this.multiplier+'d'+this.die+this.modifierStr();
+        //     };
+        //
+        // };
+        //
+        // return die;
 
-    function DiceService() {
         return {
             die: 6,
             multiplier: 1,
@@ -14,16 +48,16 @@
             mult: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
             mod: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 0],
 
-            roll: function () {
+            roll: function() {
                 this.result = 0;
-                for (var x = 0; x < this.multiplier; x++) {
-                    this.result += Math.floor(Math.random() * this.die) + 1;
+                for (var x=0; x<this.multiplier; x++) {
+                    this.result += Math.floor(Math.random()*this.die)+1;
                 }
                 this.result += this.modifier;
                 return this.result;
             },
 
-            modifierStr: function () {
+            modifierStr: function() {
                 if (this.modifier < 0) {
                     return this.modifier;
                 } else {
@@ -31,14 +65,8 @@
                 }
             },
 
-            toString: function () {
-                return this.multiplier + 'd' + this.die + this.modifierStr();
+            toString: function() {
+                return this.multiplier+'d'+this.die+this.modifierStr();
             }
         };
-    }
-
-    angular
-        .module('dice')
-        .service('DiceService', DiceService);
-
-})();
+    });
